@@ -6,12 +6,14 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   devise_scope :user do
-    # authenticated :user do
-    #   root to: 'devise/sessions#splash', as: :authenticated_root
-    # end
+    authenticated :user do
+      root to: 'devise/sessions#splash', as: :authenticated_root
+    end
 
     unauthenticated :user do
       root to: 'devise/sessions#splash', as: :unauthenticated_root
     end
   end
+
+  root 'groups#index'
 end
