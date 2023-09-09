@@ -18,5 +18,7 @@ Rails.application.routes.draw do
   root 'groups#index'
 
   resources :groups do
+    resources :entities do
+    end
   end
 end
