@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
-      root to: 'devise/sessions#splash', as: :authenticated_root
+      root to: 'groups#index', as: :authenticated_root
     end
 
     unauthenticated :user do
@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   end
 
   root 'groups#index'
+
+  resources :groups do
+  end
 end
