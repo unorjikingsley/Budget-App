@@ -1,5 +1,13 @@
 # require 'faker'
+# require 'open-uri'
 
+# def image_fetcher
+#   URI.open(Faker::Company.logo)
+# rescue StandardError
+#   URI.open('https://robohash.org/sitsequiquia.png?size=300x300&set=set1')
+# end
+
+#
 # namespace :db do
 #   desc 'Populate database with sample data'
 #   task populate: :environment do
@@ -19,11 +27,13 @@
 #     )
 
 #     5.times do
-#       Group.create!(
-#         name: Faker::Company.name,
-#         icon: Faker::Company.logo,
+#       g = Group.new(
+#         name: Faker::Commerce.department(max: 1),
 #         author: user
 #       )
+
+#       g.icon.attach(io: image_fetcher, filename: 'icon.png', content_type: 'image/png')
+#       g.save!
 #     end
 
 #     10.times do
@@ -53,11 +63,13 @@
 #       )
 
 #       5.times do
-#         Group.create!(
-#           name: Faker::Company.name,
-#           icon: Faker::Company.logo,
+#         g = Group.new(
+#           name: Faker::Commerce.department(max: 1),
 #           author: user
 #         )
+
+#         g.icon.attach(io: image_fetcher, filename: 'icon.png', content_type: 'image/png')
+#         g.save!
 
 #         Entity.create!(
 #           name: Faker::Commerce.product_name,
