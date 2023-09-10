@@ -7,7 +7,6 @@
 #   URI.open('https://robohash.org/sitsequiquia.png?size=300x300&set=set1')
 # end
 
-# # rubocop:disable Metrics/BlockLength
 # namespace :db do
 #   desc 'Populate database with sample data'
 #   task populate: :environment do
