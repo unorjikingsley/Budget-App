@@ -1,7 +1,8 @@
 require_relative '../rails_helper'
 
 RSpec.describe 'Entities', type: :system do
-  let(:user) { User.create(name: 'First User', email: 'test@user.com', password: 'password') }
+  # let(:user) { User.create(name: 'First User', email: 'test@user.com', password: 'password') }
+  let(:user) { User.create(name: 'First User', email: 'test@user.com', password: 'password', confirmed_at: Time.now) }
   before do
     # comment the line below to run tests in browser
     driven_by(:rack_test)
