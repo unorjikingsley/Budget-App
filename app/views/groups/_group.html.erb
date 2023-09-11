@@ -1,14 +1,16 @@
-<div class="img-full">
-  <div class="group-info">
-    <div class="img-box">
-      <%= image_tag group.icon, class: "img-nme" %>
+<a href="<%= group_path(group) %>" class="trans-link">
+  <div class="img-full">
+    <div class="group-info">
+      <div class="img-box">
+        <%= image_tag group.icon, class: "img-nme" %>
+      </div>
+      <div class="group-name">
+        <%= group.name %>
+      </div>
     </div>
-    <div class="group-name">
-      <%= link_to group.name, group_path(group), class: "name" %>
-    </div>
-  </div>
 
-  <div class="group-amount">
-    <p class="amtno"> <%= number_to_currency(group.entities.sum(:amount)) %></p>
+    <div class="group-amount">
+      <p class="amtno"><%= number_to_currency(group.entities.sum(:amount)) %></p>
+    </div>
   </div>
-</div>
+</a>

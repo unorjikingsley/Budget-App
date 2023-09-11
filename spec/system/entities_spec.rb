@@ -2,7 +2,6 @@ require_relative '../rails_helper'
 
 RSpec.describe 'Entities', type: :system do
   let(:user) { User.create(name: 'First User', email: 'test@user.com', password: 'password') }
-
   before do
     # comment the line below to run tests in browser
     driven_by(:rack_test)
@@ -34,9 +33,6 @@ RSpec.describe 'Entities', type: :system do
     fill_in 'user_email', with: 'test@user.com'
     fill_in 'user_password', with: 'password'
     click_button 'Log in'
-
-    # Ensure the user is logged in before proceeding with tests
-    # expect(page).to have_content('Signed in successfully.')
   end
 
   after(:all) do

@@ -6,7 +6,7 @@ RSpec.describe 'Welcome', type: :system do
   end
   it 'displays welcome message' do
     visit '/'
-    expect(page).to have_content('Budgget')
+    expect(page).to have_content('Budget')
   end
 
   it 'displays sign up link' do

@@ -182,6 +182,13 @@ body {
   text-decoration: none;
 }
 
+.trans-link {
+  text-decoration: none;
+  color: grey;
+  font-size: 25px;
+  font-weight: 600;
+}
+
 .group-name {
   align-items: center;
   display: flex;
