@@ -13,6 +13,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Key Features ](#key-features-)
     - [Technical Setup ](#technical-setup-)
+    - [Deplyment and video](#live-server--deployment)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -46,6 +47,13 @@
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
+
+### Live-Server & Deployment <a name="Live Server"></a>
+- You can view this project (live)[https://budgetapp-g9r8.onrender.com]
+
+- Recorded (video)[https://www.loom.com/share/0fc0de2da72f4192819722835d846c8c] about the project
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- Features -->
 
