@@ -49,9 +49,9 @@
 </details>
 
 ### Live-Server & Deployment <a name="Live Server"></a>
-- You can view this project (live)[https://budgetapp-g9r8.onrender.com]
+- You can view this project [live](https://budgetapp-g9r8.onrender.com)
 
-- Recorded (video)[https://www.loom.com/share/0fc0de2da72f4192819722835d846c8c] about the project
+- Recorded [video](https://www.loom.com/share/0fc0de2da72f4192819722835d846c8c) about the project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
