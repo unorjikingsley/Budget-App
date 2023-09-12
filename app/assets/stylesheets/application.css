@@ -49,6 +49,7 @@ body {
 /* Header styles */
 .welcome-giant {
   font-size: 50px;
+  margin-top: auto;
 }
 
 /* Navigation styles */
@@ -58,10 +59,6 @@ body {
   margin-top: auto;
   width: 100%;
   margin-bottom: 20px;
-}
-
-.welcome-giant {
-  margin-top: auto; /* Pushes the h1 to the middle vertically */
 }
 
 .wel-sign {
@@ -139,16 +136,21 @@ body {
   font-weight: bold;
 }
 
-.acct-pg {
-  height: 100vh;
-}
+/* .acct-pg {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+} */
 
 .cat {
+  flex: 1;
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
   color: white;
   background-color: #3778c2;
+  margin-bottom: auto;
 }
 
 .text-new {
@@ -174,6 +176,22 @@ body {
   background-color: #edf0f4;
   margin: 20px;
   border-radius: 5px;
+}
+
+.scann {
+  background-color: #5fb523;
+  padding: 20px 0 20px 0;
+  margin-top: auto !important;
+}
+
+.sac {
+  color: #fff;
+  text-align: center;
+  background-color: #5fb523;
+  border: 2px solid #fff;
+  padding: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .group-info {
@@ -290,7 +308,7 @@ body {
 }
 
 /* Responsive styles */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .welcome-giant {
     font-size: 36px;
   }
@@ -374,7 +392,7 @@ body {
 
   .text-cat {
     padding: 0;
-    margin-left: 28%;
+    margin-left: 36%;
   }
 
   .text-group {
@@ -404,4 +422,8 @@ body {
   .entity-time {
     font-size: 12px;
   }
-} */
+
+  .img-new {
+    margin-bottom: 83%;
+}
+}
