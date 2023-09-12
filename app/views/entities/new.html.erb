@@ -22,7 +22,7 @@
                  class: "form-label" %>
       <%= select_tag "entity[group_ids][]",
       options_from_collection_for_select(@groups, :id, :name, selected: @group.id),
-      { multiple: true, class: "form-control w-full [&>*]:p-2", size: @groups.count } %>
+      { multiple: true, class: "form-control w-full", size: @groups.count } %>
     </div>
 
     <div class="sub">

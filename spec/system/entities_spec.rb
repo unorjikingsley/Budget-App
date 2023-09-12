@@ -1,9 +1,7 @@
 require_relative '../rails_helper'
 
 RSpec.describe 'Entities', type: :system do
-  # let(:user) { User.create(name: 'First User', email: 'test@user.com', password: 'password') }
   let(:user) { User.create(name: 'First User', email: 'test@user.com', password: 'password', confirmed_at: Time.now) }
-
   before do
     # comment the line below to run tests in browser
     driven_by(:rack_test)
@@ -48,7 +46,7 @@ RSpec.describe 'Entities', type: :system do
     visit group_path(Group.first)
     Group.first.entities.each do |entity|
       expect(page).to have_content(entity.name)
-      expect(page).to have_content(entity.created_at.strftime("%B%e, %Y%l:%M %p\n"))
+      expect(page).to have_content(entity.created_at.strftime('%B%e, %Y %l:%M%p'))
     end
   end
 
