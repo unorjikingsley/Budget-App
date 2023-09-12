@@ -1,34 +1,32 @@
 <div class="login-pg">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "login-reg" }) do |f| %>
-    <h2 class="text-2xl text-gray-100">SIGN IN</h2>
-
-    <%# <div class="form-logins"> %>
-      <div class="log-in">
-        <div class="absolute">
-          <%= f.submit "Log in", class: "text" %>
-        </div>
-        <div class="actions">
-          <a href="/" class="back">Back</a>
-        </div>
+    <div class="abs">
+      <div class="actions">
+        <a href="/" class="back">⬅</a>
       </div>
+      <h2 class="text">LOGIN</h2>
+      <h4 class="not">Log in</h4>      
+    </div>
 
-      <div class="field">
-        <%= f.email_field :email,
-                      autofocus: true,
-                      autocomplete: "email",
-                      placeholder: "Email",
+    <div class="field">
+      <%= f.email_field :email,
+                    autofocus: true,
+                    autocomplete: "email",
+                    placeholder: "Email",
+                    class: "w-full" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password,
+                      autocomplete: "current-password",
+                      placeholder: "Password",
                       class: "w-full" %>
-      </div>
-
-      <div class="field">
-        <%= f.password_field :password,
-                        autocomplete: "current-password",
-                        placeholder: "Password",
-                        class: "w-full" %>
-      </div>
-    <%# </div> %>
+    </div>
     
-
+    <div class="log-in">
+      <%= f.submit "Log in", class: "text" %>
+    </div>
+  </div>
   <% end %>
   <%= render "devise/shared/links" %>
 </div>
