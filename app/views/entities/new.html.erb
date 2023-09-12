@@ -1,0 +1,33 @@
+<div class="acct-pg">
+  <div class="cat">
+    <div class="absolute-new">
+      <%= link_to "Back", group_path(@group), class: "text-new" %>
+    </div>
+
+    <h2 class="text-group">ADD NEW ENTITY</h2>
+  </div>
+
+  <%= form_with model: @entity, class: "form-two", url: group_entities_path(@group) do |form| %>
+    <div class="field">
+      <%= form.text_field :name, placeholder: "Name", class: "form-control w-full" %>
+    </div>
+
+    <div class="field">
+      <%= form.number_field :amount, min: 0, placeholder: "Amount", class: "form-control w-full" %>
+    </div>
+
+    <div class="field-three">
+      <%= form.label :group_ids,
+                 "Select categories to add this transaction to. Press CTRL+click or click and drag to select multiple",
+                 class: "form-label" %>
+      <%= select_tag "entity[group_ids][]",
+      options_from_collection_for_select(@groups, :id, :name, selected: @group.id),
+      { multiple: true, class: "form-control w-full", size: @groups.count } %>
+    </div>
+
+    <div class="sub">
+      <%= form.submit class: "sub-btn" %>
+    </div>
+  <% end %>
+
+</div>

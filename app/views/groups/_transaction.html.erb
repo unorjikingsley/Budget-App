@@ -1,0 +1,9 @@
+<div class="cards">
+  <div class="cards-nme">
+    <p class="entity-nme"><%= entity.name %></p>
+  </div>
+  <div class="transaction-amount">
+    <p class="entity-amt"><%= number_to_currency(entity.amount) %></p>
+    <p class="entity-time"><%= entity.created_at.strftime("%B%e, %Y %l:%M%p") %></p>
+  </div>
+</div>

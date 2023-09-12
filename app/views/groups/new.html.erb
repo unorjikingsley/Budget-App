@@ -1,37 +1,26 @@
-<div class="new-group flex flex-col items-center gap-2 min-h-screen">
-  <div
-    class="
-      nav
-      flex
-      justify-center
-      items-center
-      bg-[#3778c2]
-      py-2
-      w-full
-      sticky
-      z-10
-      top-0
-    "
-  >
-    <h2 class="text-2xl text-gray-100">ADD NEW GROUP</h2>
+<div class="acct-pg">
+  <div class="cat">
     <div class="actions absolute left-3">
-      <a href="/" class="text-white cursor-pointer">Back</a>
+      <a href="/" class="text-new">Back</a>
+    </div>
+    <div class="t-group">
+      <h2 class="text-group">ADD NEW GROUP</h2>
     </div>
   </div>
 
-  <%= form_with(model: @group, html: { class: "flex flex-col w-full gap-2 px-2" }) do |form| %>
-    <div class="field w-full">
+  <%= form_with(model: @group, html: { class: "form-two" }) do |form| %>
+    <div class="field">
       <%= form.text_field :name, placeholder: "Name", class: "form-control w-full" %>
     </div>
 
-    <div class="field file-upload w-full">
+    <div class="field">
       <%= form.file_field :icon,
                       accept: "image/png, image/jpeg, image/jpg",
                       class: "form-control w-full" %>
     </div>
 
-    <div class="actions w-full bg-[#3778c2] text-white p-2 text-center">
-      <%= form.submit class: "w-full hover:cursor-pointer" %>
+    <div class="sub">
+      <%= form.submit class: "sub-btn" %>
     </div>
   <% end %>
 </div>

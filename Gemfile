@@ -83,3 +83,5 @@ gem 'cancancan'
 gem 'rswag'
 
 gem 'faker'
+
+gem 'letter_opener', '~> 1.8'

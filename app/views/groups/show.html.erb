@@ -1,3 +1,20 @@
-<h1>
-  /groups/show
-</h1>
+<div class="acct-pg">
+  <div class="cat">
+    <div class="actions absolute left-3">
+      <a href="/" class="text-new">Back</a>
+    </div>
+    <h2 class="text-2xl text-gray-100"><%= @group.name %></h2>
+    <div class="text-new">
+      <%= number_to_currency(@group.entities.sum(:amount)) %>
+    </div>
+  </div>
+  <div class="px-2 w-full flex flex-col gap-2 mb-2">
+    <%= render partial: "transaction",
+    collection: @group.entities.order(created_at: :desc),
+    as: :entity %>
+  </div>
+  <%= button_to "Add Transaction",
+  new_group_entity_path(@group),
+  method: :get,
+  class: "sub-btn trans" %>
+</div>
